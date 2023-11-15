@@ -22,6 +22,7 @@ public class InicioSesionController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODOaoasdoasdofas
         //Vistas viejo
+        //prueba
     }    
     
 }
