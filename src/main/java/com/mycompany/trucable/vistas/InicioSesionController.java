@@ -37,8 +37,10 @@ public class InicioSesionController implements Initializable {
         root = FXMLLoader.load(getClass().getResource("MenuPrincipal.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
+        stage.setScene(scene);
         //Aqui vamos a crear un conflicto yo contra ti
-        //vamooooos
-        //Suuuuuuuuu
+        stage.show();//vamooooos
+        //Suuuuuuuuu odfhgaidluhgadiugreh
+        //osdijkfaslkjfvadskljjhbf
     }
 }
