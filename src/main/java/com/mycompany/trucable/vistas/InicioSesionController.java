@@ -34,15 +34,10 @@ public class InicioSesionController implements Initializable {
     
     
     public void CambiarVentana(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("MenuPrincipal.fxml"));
+        root = FXMLLoader.load(getClass().getResource("Seleccion.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
-        //Aqui vamos a crear un conflicto yo contra ti
-        stage.show();//vamooooos
-        //Suuuuuuuuu odfhgaidluhgadiugreh
-        //osdijkfaslkjfvadskljjhbf
-        //kaodfdjj dihuish
-        //bfhvbaqhyifrbvoiqahbyervi
+        stage.show();
     }
 }
