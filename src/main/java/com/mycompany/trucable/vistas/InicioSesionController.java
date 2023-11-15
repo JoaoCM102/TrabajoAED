@@ -36,7 +36,7 @@ public class InicioSesionController implements Initializable {
     public void CambiarVentana(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("MenuPrincipal.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root, 600, 600);
+        scene = new Scene(root);
         stage.setScene(scene);
         stage.show();//vamos a estudiar
     }
