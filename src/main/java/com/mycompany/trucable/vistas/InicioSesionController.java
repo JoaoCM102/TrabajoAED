@@ -24,6 +24,7 @@ public class InicioSesionController implements Initializable {
         //Vistas viejo
         //prueba
         //prueba Definitiva2
+        //Me estoy hartando
     }    
     
 }
