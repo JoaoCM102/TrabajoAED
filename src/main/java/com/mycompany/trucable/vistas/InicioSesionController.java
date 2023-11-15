@@ -42,6 +42,7 @@ public class InicioSesionController implements Initializable {
         stage.show();//vamooooos
         //Suuuuuuuuu odfhgaidluhgadiugreh
         //osdijkfaslkjfvadskljjhbf
+        //kaodfdjj dihuish
         //bfhvbaqhyifrbvoiqahbyervi
     }
 }
