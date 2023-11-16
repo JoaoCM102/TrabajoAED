@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package com.mycompany.trucable.vistas;
+package com.mycompany.trucable;
 
 import java.io.IOException;
 import java.net.URL;
@@ -34,7 +34,7 @@ public class InicioSesionController implements Initializable {
     
     
     public void CambiarVentana(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("Seleccion.fxml"));
+        root = FXMLLoader.load(getClass().getResource("InicioSesion.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
