@@ -108,7 +108,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.4</version>
                 <configuration>
-                    <mainClass>com.mycompany.prueba.App</mainClass>
+                    <mainClass>com.mycompany.trucable.App</mainClass>
                 </configuration>
                 <executions>
                     <execution>
