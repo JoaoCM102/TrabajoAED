@@ -4,6 +4,6 @@ module com.mycompany.trucable {
     requires java.base;
     requires jakarta.persistence;
 
-    opens com.mycompany.trucable to javafx.fxml;
+    opens com.mycompany.trucable.vistas to javafx.fxml;
     exports com.mycompany.trucable;
 }
