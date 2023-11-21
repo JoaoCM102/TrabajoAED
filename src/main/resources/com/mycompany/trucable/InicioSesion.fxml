@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane id="AnchorPane" prefHeight="446.0" prefWidth="342.0" style="-fx-background-color: #0097B2; -fx-background-radius: 11;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.trucable.vistas.InicioSesionController">
    <children>
       <Label layoutX="106.0" layoutY="85.0" style="-fx-font-family: &quot;Lucida Bright&quot;;" text="Iniciar Sesion" textFill="#ebebeb">
@@ -26,6 +25,6 @@
       </Label>
       <TextField layoutX="14.0" layoutY="161.0" prefHeight="25.0" prefWidth="303.0" />
       <TextField layoutX="14.0" layoutY="215.0" prefHeight="25.0" prefWidth="303.0" />
-      <Button layoutX="41.0" layoutY="315.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="249.0" style="-fx-background-radius: 11; -fx-background-color: blue;" text="Iniciar Sesion" textFill="WHITE" />
+      <Button fx:id="BotonInicioSesion" layoutX="41.0" layoutY="315.0" mnemonicParsing="false" onMouseClicked="#ComprobarCredenciales" prefHeight="36.0" prefWidth="249.0" style="-fx-background-radius: 11; -fx-background-color: blue;" text="Iniciar Sesion" textFill="WHITE" />
    </children>
 </AnchorPane>
