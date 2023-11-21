@@ -16,13 +16,15 @@ public class Producto {
     String descripcion;
     ArrayList<String> demanda;
     boolean disponible;
+    int idUsuario;
 
-    public Producto(int id, String nombre, ArrayList<String> demanda, String descripcion, boolean disponible) {
+    public Producto(int id, String nombre, ArrayList<String> demanda, String descripcion, boolean disponible, int idUsuario) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.demanda = demanda;
         this.disponible = disponible;
+        this.idUsuario = idUsuario;
     }
 
     public String getNombre() {
@@ -55,5 +57,13 @@ public class Producto {
 
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
+    }
+
+    public int getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
 }

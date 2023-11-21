@@ -4,8 +4,8 @@
  */
 package com.mycompany.trucable.conexion;
 
+import com.mycompany.trucable.modelo.Producto;
 import com.mycompany.trucable.modelo.Usuario;
-import java.util.List;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -34,5 +34,46 @@ public class ConexionBase {
         Statement consulta = conexion.createStatement();
         ResultSet resultado = consulta.executeQuery("Select * from Usuarios");
         return resultado;
+    }
+    
+    public ResultSet datosProductos(Connection conexion) throws SQLException {
+        Statement consulta = conexion.createStatement();
+        ResultSet resultado = consulta.executeQuery("Select * from Productos");
+        return resultado;
+    }
+    
+    public ResultSet obtenerUsuario(Connection conexion, String usuario) throws SQLException {
+        Statement consulta = conexion.createStatement();
+        ResultSet resultado = consulta.executeQuery("Select * from usuarios where usuario == '" + usuario + "'");
+        return resultado;
+    }
+    
+    public ResultSet obtenerProductoUsuario(Connection conexion, int id) throws SQLException {
+        Statement consulta = conexion.createStatement();
+        ResultSet resultado = consulta.executeQuery("Select * from Productos where idUsuario == '" + id + "'");
+        return resultado;
+    }
+    
+    public ResultSet obtenerProducto(Connection conexion, int id) throws SQLException {
+        Statement consulta = conexion.createStatement();
+        ResultSet resultado = consulta.executeQuery("Select * from Productos where id == '" + id + "'");
+        return resultado;
+    }
+    
+    public void crearProducto(Connection conexion, Producto producto) throws SQLException {
+        Statement consulta = conexion.createStatement();
+        String productosDemandados = "";
+        for (String productoDemandado : producto.getDemanda()) {
+            productosDemandados += productoDemandado;
+        }
+        consulta.executeQuery("INSERT INTO Productos VALUES (" + producto.getNombre() + ", " 
+                + producto.getDescripcion() + ", " + productosDemandados + ", " + producto.isDisponible() 
+                + ", " + producto.getIdUsuario() + ")");
+    }
+    
+    public void crearUsuario(Connection conexion, Usuario usuario) throws SQLException {
+        Statement consulta = conexion.createStatement();
+        consulta.executeQuery("INSERT INTO Usuarios VALUES (" + usuario.getUsuario() + ", " 
+                + usuario.getCorreo() + ", " + usuario.getNombre() + ", " + usuario.getClave() + ")");
     }
 }
