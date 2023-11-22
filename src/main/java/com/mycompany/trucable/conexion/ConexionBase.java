@@ -76,4 +76,20 @@ public class ConexionBase {
         consulta.executeQuery("INSERT INTO Usuarios VALUES (" + usuario.getUsuario() + ", " 
                 + usuario.getCorreo() + ", " + usuario.getNombre() + ", " + usuario.getClave() + ")");
     }
+    
+    public void cambiarClave(Connection conexion, String usuario, String nuevaClave) throws SQLException {
+        Statement consulta = conexion.createStatement();
+        consulta.executeQuery("Update Usuarios set clave = " + nuevaClave + " where usuario = " + usuario);
+    }
+    
+    public void editarProducto(Connection conexion, String campo, String nuevoDato, int idUsuario) throws SQLException {
+        Statement consulta = conexion.createStatement();
+        consulta.executeQuery("Update Productos set " + campo + " = " + nuevoDato + " where idUsuario = " + idUsuario);
+    }
+    
+    public void editarEstadoProducto(Connection conexion, int idUsuario, String nombre) throws SQLException {
+        Statement consulta = conexion.createStatement();
+        consulta.executeQuery("Update Productos set disponible = 'false' where idUsuario = " + idUsuario 
+                + " and nombre = '" + nombre + "'");
+    }
 }
